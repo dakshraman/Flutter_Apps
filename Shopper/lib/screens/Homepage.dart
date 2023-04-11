@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shopper/screens/HomeAppBar.dart';
 import 'package:shopper/screens/CategoriesWidget.dart';
 import 'package:shopper/screens/ItemsWidget.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 class HomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
@@ -10,15 +11,15 @@ class HomePage extends StatelessWidget{
         children: [
           HomeAppBar(),
           Container(
-            height: 650,
+           // height: 650,
             padding: EdgeInsets.only(top: 15),
             decoration: BoxDecoration(
-              color: Colors.grey,
+              color: Colors.blue,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(35),
-                topRight: Radius.circular(35),
-                bottomLeft: Radius.circular(35),
-                bottomRight: Radius.circular(35),
+                topLeft: Radius.circular(25),
+                topRight: Radius.circular(25),
+                bottomLeft: Radius.circular(25),
+                bottomRight: Radius.circular(25),
               ),
             ),
             child: Column(
@@ -29,11 +30,13 @@ class HomePage extends StatelessWidget{
                   height: 50,
                   decoration: BoxDecoration(
                     color: Colors.white,
+
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Row(
                     children: [
                       Container(
+
                         margin: EdgeInsets.only(left: 5),
                         height: 50,
                         width: 300,
@@ -47,7 +50,7 @@ class HomePage extends StatelessWidget{
                       Spacer(),
                       Icon(
                         Icons.camera_alt_outlined,
-                        size: 27,
+                        size: 30,
                         color: Colors.blue,
                       )
                     ],
@@ -64,7 +67,7 @@ class HomePage extends StatelessWidget{
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -78,7 +81,7 @@ class HomePage extends StatelessWidget{
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blue,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -88,7 +91,18 @@ class HomePage extends StatelessWidget{
           ),
 
         ],
-      )
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+        items: <Widget>[
+          Icon(Icons.home_filled, size: 30),
+          Icon(Icons.shopping_cart_rounded, size: 30),
+          Icon(Icons.list, size: 30),
+        ],
+        onTap: (index) {},
+        height: 70,
+        color: Colors.blueAccent,
+      ),
     );
   }
 }

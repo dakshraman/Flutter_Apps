@@ -31,11 +31,15 @@ class HomeAppBar extends StatelessWidget{
           badges.Badge(
             onTap: () {},
             badgeStyle: badges.BadgeStyle(
-              badgeColor: Colors.blueAccent,
+              badgeColor: Colors.blue,
             ),
-            badgeContent: Text('0'),
-            child:
-            Icon(Icons.shopping_cart_outlined),
+            badgeContent: Text(""),
+            child: InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, "loginpage");
+              },
+              child: Icon(Icons.account_circle_outlined),
+            ),
           )
         ],
       ),

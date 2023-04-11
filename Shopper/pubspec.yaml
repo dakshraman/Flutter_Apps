@@ -40,6 +40,12 @@ dependencies:
   google_nav_bar: ^5.0.6
   line_icons: ^2.0.1
   badges: ^3.0.3
+  curved_navigation_bar: ^1.0.3 #latest version
+  google_sign_in: ^5.2.1
+  firebase_auth: ^3.1.0
+  sign_in_with_apple: ^3.0.0
+  sign_button: ^2.0.3
+
 
 dev_dependencies:
   flutter_test:
